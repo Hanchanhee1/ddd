@@ -1,0 +1,246 @@
+/* Font */
+@font-face {
+    font-family: 'Pretendard-Regular';  /* 폰트 이름 */
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;  /* 기본 폰트 두께 */
+    font-style: normal;  /* 폰트 스타일 */
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .search {
+    flex-direction: column;
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .login-btn {
+    width: auto;
+  }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem 1.25rem;  /* 10px, 20px -> rem으로 변경 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    font-family: 'Pretendard-Regular', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.brand {
+    margin-left: 1.5625rem;  /* 25px -> rem으로 변경 */
+}
+
+.logo {
+    text-decoration: none;
+    color: #8c52ff;
+}
+
+.logo2 {
+    text-decoration: none;
+    color: #8c52ff;
+    text-shadow: 0 0 10px rgba(124, 58, 237, 0.3), 0 0 20px rgba(124, 58, 237, 0.2);
+}
+
+.content {
+    display: flex;
+    min-height: calc(100vh - 190px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: linear-gradient(45deg, #ffffff, #ffffff, #fdf0ff, #fae3ff, #ffffff, #ffffff);
+    background-size: 400% 400%;
+    animation: gradientAnimation 5s ease infinite;
+}
+
+/* 그라디언트 색깔을 변화시키는 애니메이션 */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.content-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.625rem;  /* 10px -> rem으로 변경 */
+    margin-bottom: 2.5rem;
+    color: #555;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0;  /* form 기본 여백 제거 */
+    padding: 0; /* form 기본 패딩 제거 */
+}
+
+.search-btn {
+    margin-top: 3.125rem;  /* 50px -> rem으로 변경 */
+    width: 50rem;  /* 800px -> rem으로 변경 */
+    padding: 0.625rem 0.9375rem;  /* 10px 15px -> rem으로 변경 */
+    background-color: #e6e6e6;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 0.3125rem;  /* 5px -> rem으로 변경 */
+    font-size: 1rem;  /* 16px -> rem으로 변경 */
+    cursor: pointer;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    font-size: 0.9375rem;  /* 15px -> rem으로 변경 */
+}
+
+.brand span {
+    font-size: 1.5rem;  /* 24px -> rem으로 변경 */
+    font-weight: bold;
+}
+
+.category-login {
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    gap: 1.25rem;  /* 20px -> rem으로 변경 */
+    align-items: center;
+}
+
+.nav-ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.login-btn {
+    color: white;
+    width: 7.5rem;  /* 120px -> rem으로 변경 */
+    border-radius: 0.3125rem;  /* 5px -> rem으로 변경 */
+    background-color: black;
+    padding: 0.5rem 1rem;  /* 8px 16px -> rem으로 변경 */
+    font-size: 1rem;  /* 16px -> rem으로 변경 */
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+/* 기본 레이아웃 설정 */
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    padding: 5px 15px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.search input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.search input::placeholder {
+    color: #886666;
+}
+
+.search input:focus {
+    border: 2px solid #007bff;
+}
+
+/* 검색 아이콘을 왼쪽에 배치 */
+.search a.search-icon {
+    padding: 10px;
+    margin-right: 10px; /* 오른쪽 여백 */
+    cursor: pointer;
+    color: #555;
+    transition: color 0.3s, transform 0.3s;
+    text-decoration: none;
+}
+
+/* 이미지 아이콘을 오른쪽에 배치 */
+.search a.image-icon {
+    padding: 10px;
+    margin-left: 15px;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.3s, transform 0.3s;
+    text-decoration: none;
+}
+
+.search a:hover {
+    color: #007bff;
+    transform: scale(1.1);
+}
+
+/* 아이콘을 원형 배경에 넣기 */
+.search a i {
+    font-size: 18px;
+    display: block;
+    margin: 0 auto;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.search a:hover i {
+    background-color: #007bff;
+    color: white;
+}
+
+.animated-text {
+    font-size: 50px;
+    font-family: 'Pretendard-Regular', sans-serif;
+    white-space: nowrap;  /* 텍스트가 한 줄로 나타나도록 */
+    overflow: hidden;  /* 글자가 넘치지 않도록 */
+    border-right: 3px solid black; /* 타이핑 커서처럼 보이게 */
+    width: 0;
+    animation: typing 2.5s steps(40) 1s forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    to {
+        width: 100%; /* 텍스트가 모두 보여지도록 width 조정 */
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent; /* 커서 깜빡임 효과 */
+    }
+}
+
