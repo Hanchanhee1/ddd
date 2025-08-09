@@ -83,6 +83,10 @@
     color: #8c52ff;
 }
 
+.footer-p {
+    margin: 4px;
+}
+
 /* 반응형 디자인 */
 @media (max-width: 768px) {
     .footer-content {
