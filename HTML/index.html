@@ -22,13 +22,21 @@
     <div class="header">
 
         <div class="brand">
-            <button class="category-logo" onclick="location.href='https://naver.com'">
-                <span><i class="fa-solid fa-bars"></i></span>
-            </button>
-            <a href="index.html" class="logo">
-                <span  style="margin-left: 10px;">AIMAE</span>
-            </a>
+    <div class="dropdown">
+        <button class="category-logo">
+            <span><i class="fa-solid fa-bars"></i></span>
+        </button>
+        <div class="dropdown-content">
+            <a href="#">카테고리 1</a>
+            <a href="#">카테고리 2</a>
+            <a href="#">카테고리 3</a>
+            <a href="#">카테고리 4</a>
         </div>
+    </div>
+    <a href="index.html" class="logo">
+        <span style="margin-left: 10px;">AIMAE</span>
+    </a>
+</div>
 
         <div class="nav">
             <ul class="nav-ul">
@@ -59,9 +67,9 @@
 
         <div class="search">
             <form class="search-form">
-                <a href="#" class="search-icon" id="search-icon"><i class="fas fa-search"></i></a>
-                <input type="text" placeholder="어떤 제품을 찾고 계신가요?" id="search-input" />
                 <a href="#" class="image-icon" id="image-icon"><i class="fa-solid fa-image"></i></a>
+                <input type="text" placeholder="어떤 제품을 찾고 계신가요?" id="search-input" />
+                <a href="#" class="search-icon" id="search-icon"><i class="fas fa-search"></i></a>
                 <input type="file" id="file-input" style="display:none;">
             </form>
         </div>
@@ -74,11 +82,11 @@
         <h2 class="content-product-header">신상품</h2>
         
         <div class="product-slider" id="product-slider2">
-            <div class="product-list-box" id="product-list">1</div>
-            <div class="product-list-box" id="product-list">2</div>
-            <div class="product-list-box" id="product-list">3</div>
-            <div class="product-list-box" id="product-list">4</div>
-            <div class="product-list-box" id="product-list">5</div>
+            <div class="product-list-box" id="product-list"><a href="#" class="list-pbox">1</a></div>
+            <div class="product-list-box" id="product-list"><a href="#" class="list-pbox">2</a></div>
+            <div class="product-list-box" id="product-list"><a href="#" class="list-pbox">3</a></div>
+            <div class="product-list-box" id="product-list"><a href="#" class="list-pbox">4</a></div>
+            <div class="product-list-box" id="product-list"><a href="#" class="list-pbox">5</a></div>
         </div>
     </div>
 
@@ -86,16 +94,17 @@
         <h2 class="content-product-header">최근 구매순</h2>
         
         <div class="product-slider" id="product-slider2">
-            <div class="product-list-box" id="product-list">1</div>
-            <div class="product-list-box" id="product-list">2</div>
-            <div class="product-list-box" id="product-list">3</div>
-            <div class="product-list-box" id="product-list">4</div>
-            <div class="product-list-box" id="product-list">5</div>
+            <div class="product-list-box" id="product-list"><a href="#" class="list-pbox">1</a></div>
+            <div class="product-list-box" id="product-list"><a href="#" class="list-pbox">2</a></div>
+            <div class="product-list-box" id="product-list"><a href="#" class="list-pbox">3</a></div>
+            <div class="product-list-box" id="product-list"><a href="#" class="list-pbox">4</a></div>
+            <div class="product-list-box" id="product-list"><a href="#" class="list-pbox">5</a></div>
         </div>
     </div>
 
-    <div>
-        <img src="/IMG/aa.png" style="width: 100%; height: auto; max-width: 100%;">
+    <div class="content-box-img">
+        <img class="content-img" src="/IMG/freedelivery.png">
+        <img class="content-img" src="/IMG/freedelivery2.png">
     </div>
 
     <!-- Footer -->
@@ -149,6 +158,25 @@
                 infinite: false,        // 무한 루프 여부 (원하는 대로)
                 prevArrow: '<button type="button" class="slick-prev"><i class="fa-solid fa-angle-left"></i></button>',
                 nextArrow: '<button type="button" class="slick-next"><i class="fa-solid fa-angle-right"></i></button>'
+            });
+        });
+    </script>
+
+    <!-- 드롭다운 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const dropdown = document.querySelector('.dropdown');
+        const btn = dropdown.querySelector('.category-logo');
+
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                dropdown.classList.toggle('show');
+            });
+
+            window.addEventListener('click', (e) => {
+                if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('show');
+                }
             });
         });
     </script>

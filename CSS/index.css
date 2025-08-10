@@ -173,11 +173,11 @@
 }
 
 .content-product-header {
-    margin-left: 10rem;
+    margin-left: 16rem;
     margin-top: 3rem;
 }
 
-.cotent-header {
+.content-header {
   margin-left: 40px;
 }
 
@@ -215,7 +215,7 @@
 #product-list {
     justify-content: center;
     display: flex;
-    height: 350px;
+    height: 300px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* 기본 은은한 그림자 */
     transition: box-shadow 0.3s ease; /* 부드러운 전환 효과 */
@@ -259,10 +259,39 @@
 
 /* 화살표 위치 조정 */
 .slick-prev {
+    display: flex;
+    width: 70px;
     left: -40px;
+    border-radius: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* 기본 은은한 그림자 */
+    transition: box-shadow 0.3s ease; /* 부드러운 전환 효과 */
+    height: 50px;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 8rem;
 }
+
+.slick-prev:hover {
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* 마우스 올렸을 때 진한 그림자 */
+}
+
 .slick-next {
+    display: flex;
+    width: 70px;
     right: -40px;
+    border-radius: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* 기본 은은한 그림자 */
+    transition: box-shadow 0.3s ease; /* 부드러운 전환 효과 */
+    height: 50px;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 8rem;
+}
+
+.slick-next:hover {
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* 마우스 올렸을 때 진한 그림자 */
 }
 
 .slick-prev::before {
@@ -272,4 +301,64 @@
 .slick-next::before {
     font-size: 30px;
     color: #333;
+}
+
+.list-pbox {
+    text-decoration: none;
+    color: black;
+}
+
+.content-box-img {
+    display: flex;
+    justify-content: space-around;
+}
+
+.content-img {
+    width: 48%;
+    height: auto;
+    max-width: 100%;
+    margin-left: 5px;
+    margin-bottom: 2rem;
+}
+
+/* 드롭다운 컨테이너 */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* 드롭다운 메뉴 숨기기 */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 150px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+  border-radius: 4px;
+  padding: 8px 0;
+}
+
+/* 드롭다운 메뉴 항목 스타일 */
+.dropdown-content a {
+  color: #333;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+/* 마우스 오버 시 배경색 */
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
+}
+
+/* 드롭다운 열림 표시 (active 클래스) */
+.dropdown.show .dropdown-content {
+  display: block;
+}
+
+/* 마우스 오버 시 드롭다운 메뉴 보이기 */
+.dropdown:hover .dropdown-content {
+  display: block;
 }
