@@ -1,54 +1,3 @@
-/* Font */
-@font-face {
-    font-family: 'Pretendard-Regular';  /* 폰트 이름 */
-    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;  /* 기본 폰트 두께 */
-    font-style: normal;  /* 폰트 스타일 */
-}
-
-@media (max-width: 768px) {
-  .nav {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .search {
-    flex-direction: column;
-    max-width: 90%;
-  }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  .login-btn {
-    width: auto;
-  }
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.625rem 1.25rem;  /* 10px, 20px -> rem으로 변경 */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-body {
-    font-family: 'Pretendard-Regular', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.brand {
-    margin-left: 1.5625rem;  /* 25px -> rem으로 변경 */
-}
-
-.logo {
-    text-decoration: none;
-    color: #8c52ff;
-}
-
 .logo2 {
     text-decoration: none;
     color: #8c52ff;
@@ -89,6 +38,28 @@ body {
     color: #555;
 }
 
+.content-product {
+    height: 500px;
+}
+
+.cotent-header {
+    margin-left: 40px;
+}
+
+.content-product-list {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.product-list-box {
+    width: 246px;
+    height: 284px;
+    background-color: #e6e6e6;
+    gap: 50px;
+}
+
 .search-form {
     display: flex;
     align-items: center;
@@ -107,49 +78,6 @@ body {
     border-radius: 0.3125rem;  /* 5px -> rem으로 변경 */
     font-size: 1rem;  /* 16px -> rem으로 변경 */
     cursor: pointer;
-}
-
-.link {
-    text-decoration: none;
-    color: black;
-    font-size: 0.9375rem;  /* 15px -> rem으로 변경 */
-}
-
-.brand span {
-    font-size: 1.5rem;  /* 24px -> rem으로 변경 */
-    font-weight: bold;
-}
-
-.category-login {
-    display: flex;
-    align-items: center;
-}
-
-.nav {
-    display: flex;
-    gap: 1.25rem;  /* 20px -> rem으로 변경 */
-    align-items: center;
-}
-
-.nav-ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-}
-
-.login-btn {
-    color: white;
-    width: 7.5rem;  /* 120px -> rem으로 변경 */
-    border-radius: 0.3125rem;  /* 5px -> rem으로 변경 */
-    background-color: black;
-    padding: 0.5rem 1rem;  /* 8px 16px -> rem으로 변경 */
-    font-size: 1rem;  /* 16px -> rem으로 변경 */
-    cursor: pointer;
-}
-
-.login-btn:hover {
-    background-color: white;
-    color: black;
 }
 
 /* 기본 레이아웃 설정 */
@@ -244,3 +172,104 @@ body {
     }
 }
 
+.content-product-header {
+    margin-left: 10rem;
+    margin-top: 3rem;
+}
+
+.cotent-header {
+  margin-left: 40px;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 20px;
+}
+
+.content-product-list-wrapper {
+  overflow: hidden;
+  width: 800px; /* 3개 카드 너비 + gap 포함 */
+}
+
+.content-product-list {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.slider-btn {
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.slider-btn:hover {
+  background-color: #333;
+}
+
+#product-list {
+    justify-content: center;
+    display: flex;
+    height: 350px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* 기본 은은한 그림자 */
+    transition: box-shadow 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+#product-list:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* 마우스 올렸을 때 진한 그림자 */
+}
+
+.product-list-box {
+  width: 246px;
+  height: 284px;
+  background-color: #f1f1f1;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#product-slider2 {
+    display: flex;
+}
+
+/* 슬라이더 전체 영역 가운데 정렬 */
+.product-slider {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* slick 기본 화살표 커스터마이징 */
+.slick-prev,
+.slick-next {
+    background-color: transparent;
+    border: none;
+    font-size: 32px;
+    color: #333;
+    z-index: 10;
+}
+
+/* 화살표 위치 조정 */
+.slick-prev {
+    left: -40px;
+}
+.slick-next {
+    right: -40px;
+}
+
+.slick-prev::before {
+    font-size: 30px;
+    color: #333;
+}
+.slick-next::before {
+    font-size: 30px;
+    color: #333;
+}

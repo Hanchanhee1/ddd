@@ -43,13 +43,3 @@ document.getElementById("search-form").addEventListener("submit", function(event
     event.preventDefault();  // 폼 제출 기본 동작 방지
     performSearch();  // 검색 함수 호출
 });
-
-// 메뉴 아이콘에 마우스를 올렸을 때 드롭다운 메뉴 보이기
-document.getElementById("menu-icon").addEventListener("mouseover", function() {
-    document.querySelector(".dropdown-menu").style.display = "block";  // 메뉴 보이기
-});
-
-// 메뉴에서 마우스를 떼었을 때 드롭다운 메뉴 숨기기
-document.getElementById("menu-icon").addEventListener("mouseout", function() {
-    document.querySelector(".dropdown-menu").style.display = "none";  // 메뉴 숨기기
-});
