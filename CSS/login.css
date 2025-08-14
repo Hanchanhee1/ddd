@@ -4,7 +4,7 @@
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px;
+    max-width: 404px;
 }
 
 .login-box {
@@ -79,4 +79,37 @@
     gap: 1rem;
     display: flex
 ;
+}
+
+.form-input {
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-input-join {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+#tel1,
+#tel2,
+#tel3 {
+    width: 5.3rem;
+}
+
+.join-button {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.join-btn-c {
+    background-color: #ff6666 !important;
+}
+
+.join-btn-c:hover {
+    background-color: #ff2f2f !important;
 }
