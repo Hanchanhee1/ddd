@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/CSS/index.css">
     <link rel="stylesheet" href="/CSS/footer.css">
     <link rel="stylesheet" href="/CSS/header.css">
+    <link rel="stylesheet" href="/CSS/myPage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
@@ -50,69 +51,74 @@
                 <li><a href="join.html" class="link">회원가입</a></li>
                 <li><a href="#" class="link">고객센터</a></li>
             </ul>
-            
-            <button class="login-btn" onclick="location.href='myPage.html'">마이페이지</button>
         </div>
 
     </div>
 
     <!-- Content -->
-    <div class="content">
+    <div class="my-page-container">
+        <h2 class="my-page-title">마이페이지</h2>
 
-        <div>
-            <h1 class="animated-text" style="font-size: 50px;">당신의 고민을 대신 추천해주는 AI 쇼핑 도우미 <span class="logo2">' AIMAE '</span> 입니다.</h1>
+        <div style="border-bottom: 1px solid #8c52ff;"></div>
+
+        <div class="my-page-sections">
+
+            <!-- 왼쪽 사이드 메뉴 -->
+            <div class="my-page-sidebar">
+                <ul>
+                    <li><a href="#">회원 정보</a></li>
+                    <li><a href="#">주문 내역</a></li>
+                    <li><a href="#">찜한 상품</a></li>
+                    <li><a href="#">배송지 관리</a></li>
+                    <li><a href="#">비밀번호 변경</a></li>
+                    <li><a href="#">로그아웃</a></li>
+                </ul>
+            </div>
+
+            <!-- 오른쪽 사이드 메뉴 -->
+            <div class="my-page-content">
+                <h3>회원 정보</h3>
+                <div class="user-info">
+                    <p><i class="fa-solid fa-user"></i> <strong>이름</strong>: 카리나</p>
+                    <p><i class="fa-solid fa-envelope"></i> <strong>이메일</strong>: support@aimae.com</p>
+                    <p><i class="fa-solid fa-mobile-screen-button"></i> <strong>휴대폰</strong>: 010-1234-5678</p>
+                    <p><i class="fa-solid fa-house"></i> <strong>주소</strong>: 서울 강남구 테헤란로 107</p>
+                    <p><i class="fa-solid fa-calendar-day"></i> <strong>가입일</strong>: 2024-05-10</p>
+                    <button class="edit-btn" onclick="location.href='#'">정보 수정</button>
+                </div>
+
+                <div style="border-bottom: 1px solid #8c52ff; margin-top: 2rem;"></div>
+
+                <h3>최근 주문</h3>
+                <div class="order-summary">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>주문번호</th>
+                                <th>상품명</th>
+                                <th>날짜</th>
+                                <th>상태</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#20250810</td>
+                                <td>AI 스마트 스피커</td>
+                                <td>2025-08-10</td>
+                                <td>배송중</td>
+                            </tr>
+                            <tr>
+                                <td>#20250805</td>
+                                <td>AI 이어폰</td>
+                                <td>2025-08-05</td>
+                                <td>배송완료</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="#" class="more-link">전체 주문 보기 &gt;</a>
+                </div>
+            </div>
         </div>
-
-        <div class="content-text">
-            <p>당신의 쇼핑 고민을 해결해주는 최고의 인공지능 도우미</p>
-            <p>AI가 당신의 취향과 필요를 분석하여 최적의 상품을 추천해줍니다.</p>
-            <p>복잡한 쇼핑 과정에서 벗어나, 원하는 제품을 찾을 수 있습니다.</p>
-        </div>
-
-        <!-- Search bar -->
-
-        <div class="search">
-            <form class="search-form">
-                <a href="#" class="image-icon" id="image-icon"><i class="fa-solid fa-image"></i></a>
-                <input type="text" placeholder="어떤 제품을 찾고 계신가요?" id="search-input" />
-                <a href="#" class="search-icon" id="search-icon"><i class="fas fa-search"></i></a>
-                <input type="file" id="file-input" style="display:none;">
-            </form>
-        </div>
-
-    </div>
-
-    <!-- Content2 -->
-
-    <div class="content-product">
-
-        <h2 class="content-product-header">신상품</h2>
-        
-        <div class="product-slider" id="product-slider2">
-            <div class="product-list-box" id="product-list"><a href="#" class="list-pbox">1</a></div>
-            <div class="product-list-box" id="product-list"><a href="#" class="list-pbox">2</a></div>
-            <div class="product-list-box" id="product-list"><a href="#" class="list-pbox">3</a></div>
-            <div class="product-list-box" id="product-list"><a href="#" class="list-pbox">4</a></div>
-            <div class="product-list-box" id="product-list"><a href="#" class="list-pbox">5</a></div>
-        </div>
-    </div>
-
-    <div class="content-product">
-
-        <h2 class="content-product-header">최근 구매순</h2>
-        
-        <div class="product-slider" id="product-slider2">
-            <div class="product-list-box" id="product-list"><a href="#" class="list-pbox">1</a></div>
-            <div class="product-list-box" id="product-list"><a href="#" class="list-pbox">2</a></div>
-            <div class="product-list-box" id="product-list"><a href="#" class="list-pbox">3</a></div>
-            <div class="product-list-box" id="product-list"><a href="#" class="list-pbox">4</a></div>
-            <div class="product-list-box" id="product-list"><a href="#" class="list-pbox">5</a></div>
-        </div>
-    </div>
-
-    <div class="content-box-img">
-        <img class="content-img" src="/IMG/freedelivery.png">
-        <img class="content-img" src="/IMG/freedelivery2.png">
     </div>
 
     <!-- Footer -->
