@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/CSS/index.css">
     <link rel="stylesheet" href="/CSS/footer.css">
     <link rel="stylesheet" href="/CSS/header.css">
+    <link rel="stylesheet" href="/CSS/recom.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
@@ -60,7 +61,7 @@
     <div class="content">
 
         <div>
-            <h1 class="animated-text" style="font-size: 50px;">당신의 고민을 대신 추천해주는 AI 쇼핑 도우미 <span class="logo2">' AIMAE '</span> 입니다.</h1>
+            <h1 class="animated-text" style="font-size: 36px;">당신의 고민을 대신 추천해주는 AI 쇼핑 도우미 <span class="logo2">' AIMAE '</span> 입니다.</h1>
         </div>
 
         <div class="content-text">
@@ -84,17 +85,84 @@
 
     <!-- Content2 -->
 
-    <div class="content-product">
-        <h1>추천 결과 입니다.</h1>
-        <h2 class="content-product-header">추천 리스트</h2>
+    <div class="content-product" style="height: 65rem !important;">
+        <div class="recommend-header">
+            <h1>AI가 추천한 상품 결과</h1>
+            <h2 class="content-product-header">추천 리스트 (3개)</h2>
+        </div>
         
-        <div class="product-slider" id="product-slider2">
-            <div class="product-list-box" id="product-list"><a href="#" class="list-pbox">1</a></div>
-            <div class="product-list-box" id="product-list"><a href="#" class="list-pbox">2</a></div>
-            <div class="product-list-box" id="product-list"><a href="#" class="list-pbox">3</a></div>
-            <div class="product-list-box" id="product-list"><a href="#" class="list-pbox">4</a></div>
-            <div class="product-list-box" id="product-list"><a href="#" class="list-pbox">5</a></div>
-            <div class="product-list-box" id="product-list"><a href="#" class="list-pbox">6</a></div>
+        <!-- 기존 슬라이더 -->
+        <div class="product-slider" id="product-slider2" style="justify-content: center !important;">
+        <!-- 상품 1 -->
+        <div class="product-list-box">
+            <a href="#" class="list-pbox">
+                <img src="/IMG/favicon.ico" alt="상품 이미지" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-name">화이트닝 치약</h3>
+                    <p class="product-price">₩5,000</p>
+                    <button class="add-cart-btn"><i class="fas fa-shopping-cart"></i> 장바구니</button>
+                </div>
+            </a>
+        </div>
+
+        <!-- 상품 2 -->
+        <div class="product-list-box">
+            <a href="#" class="list-pbox">
+                <img src="/IMG/favicon.ico" alt="상품 이미지" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-name">민트 향 치약</h3>
+                    <p class="product-price">₩6,500</p>
+                    <button class="add-cart-btn"><i class="fas fa-shopping-cart"></i> 장바구니</button>
+                </div>
+            </a>
+        </div>
+
+        <!-- 상품 3 -->
+        <div class="product-list-box">
+            <a href="#" class="list-pbox">
+                <img src="/IMG/favicon.ico" alt="상품 이미지" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-name">잇몸 케어 치약</h3>
+                    <p class="product-price">₩7,200</p>
+                    <button class="add-cart-btn"><i class="fas fa-shopping-cart"></i> 장바구니</button>
+                </div>
+            </a>
+        </div>
+    </div>
+        
+        <!-- 표 형식 결과 -->
+        <div class="recommend-table-wrap">
+            <h3>추천 상세 비교표</h3>
+            <table border="1" class="recommend-table">
+                <thead>
+                    <tr>
+                        <th>상품명</th>
+                        <th>가격</th>
+                        <th>성분</th>
+                        <th>설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>치약1</td>
+                        <td>₩5,000</td>
+                        <td>불소, 허브추출물</td>
+                        <td>충치 예방에 효과적</td>
+                    </tr>
+                    <tr>
+                        <td>치약2</td>
+                        <td>₩6,500</td>
+                        <td>탄산칼슘, 민트</td>
+                        <td>상쾌한 향과 미백 효과</td>
+                    </tr>
+                    <tr>
+                        <td>치약3</td>
+                        <td>₩7,200</td>
+                        <td>자일리톨, 알로에</td>
+                        <td>잇몸 건강 강화</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 

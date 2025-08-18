@@ -155,7 +155,7 @@ body {
 }
 
 .animated-text {
-    font-size: 50px;
+    font-size: 30px;
     font-family: 'Pretendard-Regular', sans-serif;
     white-space: nowrap;  /* 텍스트가 한 줄로 나타나도록 */
     overflow: hidden;  /* 글자가 넘치지 않도록 */
@@ -313,12 +313,13 @@ body {
 }
 
 .content-box-img {
+    gap: 10px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .content-img {
-    width: 48%;
+    width: 36%;
     height: auto;
     max-width: 100%;
     margin-left: 5px;
@@ -365,4 +366,11 @@ body {
 /* 마우스 오버 시 드롭다운 메뉴 보이기 */
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+/* 화면 너비가 1920px 이상일 때 */
+@media (min-width: 1920px) {
+    .animated-text {
+        font-size: 55px !important;
+    }
 }

@@ -1,7 +1,3 @@
-body {
-    font-family: 'Pretendard-Regular', sans-serif;
-}
-
 /* index.css 또는 myPage.css에 추가 */
 .my-page-container {
     max-width: 1200px;
@@ -80,7 +76,6 @@ body {
 /* 기본 스타일 */
 body {
     font-family: 'Pretendard-Regular', sans-serif;
-    background-color: #f9f9f9;
     margin: 0;
     padding: 0;
 }
